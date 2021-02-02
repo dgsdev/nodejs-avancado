@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Busca CEP | Casos Covid-19</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet" />
+   <style>
+      body {
+	background: #EFEFBB;
+	background: linear-gradient(to right, rgb(197, 230, 236), rgb(239, 187, 230));
+	color: white;
+    margin: 50px;
+
+	font-family: rubik;
+    text-align: center;
+
+} 
+ </style>
+</head>
+<body>
+
+    <h1 class="text-primary">Atividadade NodeJS Avançado - Consumo de API</h1>
+    
+    <div class="container mt-5">
+        <div class="jumbotron">            
+                <h3 class="display-9">Digite um número e saiba qual é o Pokemon!</h3> 
+                <p>Os Mais famosos: 1, 4, 7, 16, 25, 26, 54, 95, 125, 131, 149 e 150 Primeira fase!</p>       
+                <form action="/envia-id" method="POST">                   
+                <input class="mx-auto form-control mt-2 w-50" type="text" name="id" id="id">
+                <input type="submit" class="btn btn-outline-primary mt-2" value="Buscar">
+                </form>			  
+    </div>
+    </div>
+
+    <div class="container mt-5">             
+        <h3 class="display-9">Saiba o total de Casos Covid-19 no seu Estado!</h3>
+       <form action="/envia-uf" method="POST"> 
+       <select id="uf" name="uf" class="mx-auto custom-select custom-select-sm form-control mt-2 w-50">
+           <option selected>Escolha seu Estado</option>
+           <option name="uf" id="uf" value="RO">RO</option>
+           <option value="AC">AC</option>
+           <option value="AM">AM</option>
+           <option value="RR">RR</option>
+           <option value="PA">PA</option>
+           <option value="AP">AP</option>
+           <option value="TO">TO</option>
+           <option value="MA">MA</option>
+           <option value="PI">PI</option>
+           <option value="CE">CE</option>
+           <option value="RN">RN</option>
+           <option value="PB">PB</option>
+           <option value="PE">PE</option>
+           <option value="AL">AL</option>
+           <option value="SE">SE</option>
+           <option value="BA">BA</option>
+           <option value="MG">MG</option>
+           <option value="ES">ES</option>
+           <option value="RJ">RJ</option>
+           <option value="SP">SP</option>
+           <option value="PR">PR</option>
+           <option value="SC">SC</option>
+           <option value="RS">RS</option>
+           <option value="MS">MS</option>
+           <option value="MT">MT</option>
+           <option value="GO">GO</option>
+           <option value="DF">DF</option>       
+         </select>
+         <input type="submit" class="btn btn-outline-primary mt-2" value="Buscar">
+         </form>
+         </div>
+       </div>
+     
+
+<!-- V01
+<div class="container mt-5">
+	<div class="jumbotron">            
+			<h3 class="display-9">Digite seu Estado e saiba números de Casos Covid-19!</h3>        
+            <form action="/envia-uf" method="POST"> 
+            <label for="uf">RO, AC, AM, RR, PA, AP, TO, MA, PI, CE, RN, PB, PE, AL, SE, BA, MG, ES, RJ, SP, PR, SC, RS, MS, MT, GO e DF</label>                      
+			<input class="form-control mt-2 w-50" type="text" name="uf" id="uf">
+            <input type="submit" class="btn btn-outline-primary mt-2" value="Buscar">
+            </form>
+</div>    
+</div>
+-->
+
+<div class="container mt-5">
+         <div class="jumbotron">            
+                <h3 class="display-9">Achar endereco pelo CEP</h3>        
+                <form action="/envia-cep" method="POST">                   
+                <input class="form-control mt-2 w-50 mx-auto" type="text" name="cep" id="cep">
+                <input type="submit" class="btn btn-outline-primary mt-2" value="Buscar">
+                </form> 
+            </div>    
+	        </div>
+
+
+</body>
+</html>

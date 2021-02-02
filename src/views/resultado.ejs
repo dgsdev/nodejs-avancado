@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Resuldado Busca CEP</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet" />
+  <style>
+    body {
+  background: #EFEFBB;
+  background: linear-gradient(to right, rgb(197, 230, 236), rgb(239, 187, 230));
+  font-family: Rubik;  
+}  
+.container {    
+    width: 50%;
+    padding: 10px;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 400px ;
+    width: 400px; 
+    
+}
+  </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="card mt-2 mb-2">
+            <div class="card-body ">
+                <h5>Seu Pokemon é:</h3>
+                    <p>Até onde pesquisei havia quase 890 pokemons com imagens! Divirta-se:) 
+                <h4><%= dado.id %> - <%= dado.name %></h4>
+                <!--<strong>Tipo: <%= dado.types %></strong> -->   
+                 
+                <br>
+                                                              
+            </div>
+            <img class="card-image" <%= dado.name %>" src="https://pokeres.bastionbot.org/images/pokemon/<%= dado.id %>.png" />
+        </div>
+        <a href="/" class="btn btn-outline-primary">Procurar outro Pokemon</a>
+    </div>
+
+   
+
+<div class="container">
+    <div class="card mt-2 mb-2">
+        <div class="card-body ">
+            <h5>Números de Casos Covid-19 <%= dado.state %></h3>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><i>UID: </i><strong><%= dado.uid %></strong></li>
+                    <li class="list-group-item"><i>UF: </i><strong><%= dado.uf %></strong></li>
+                    <li class="list-group-item"><i>Estado: </i><strong><%= dado.state %></strong></li>
+                    <li class="list-group-item"><i>Números de Casos: </i><strong><%= dado.cases %></strong></li>
+                    <li class="list-group-item"><i>Mortes: </i><strong><%= dado.deaths %></strong></li>
+                    <li class="list-group-item"><i>Suspeitas: </i><strong><%= dado.suspects %></strong></li>
+                    <li class="list-group-item"><i>Mortes Diárias: </i><strong><%= dado.refuses %></strong></li>                 
+                    <li class="list-group-item"><i>Data: </i><strong><%= dado.datetime %></strong></li>
+                </ul>    
+        </div>
+    </div>
+    <a href="/" class="btn btn-outline-primary">Procurar outros Estados</a>
+</div>
+
+
+<div class="container">
+    <div class="card mt-2 mb-2">
+        <div class="card-body ">
+            <h5>Resultado Busca Cep</h3>
+            <strong><%= dado.cep %></strong> 
+            <strong><%= dado.logradouro %></strong> 
+            <strong><%= dado.bairro %></strong>
+            <strong><%= dado.complemento %></strong>
+            <strong><%= dado.localidade %></strong>         
+            <strong><%= dado.uf %></strong> 
+                        
+        </div>
+    </div>
+    <a href="/" class="btn btn-outline-primary">Procurar outro endereço</a>
+</div>
+
+
+
+</body>
+</html>
